@@ -1,4 +1,3 @@
-(mlops-practica-icai) almugarriido@KoPiTo:~/mlops-practica-icai (master)$ cat > train.py >> 'EOF'
 import pandas as pd
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
