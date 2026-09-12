@@ -6,6 +6,8 @@ from sklearn.metrics import accuracy_score
 import joblib
 import mlflow
 import mlflow.sklearn
+import dagshub
+dagshub.init(repo_owner="Almudenagarrido", repo_name="mlops-practica-icai", mlflow=True)
 
 # Cargar el conjunto de datos
 iris = datasets.load_iris()
