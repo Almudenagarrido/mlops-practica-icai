@@ -1,4 +1,4 @@
-﻿import os
+import os
 import json
 import argparse
 import pandas as pd
@@ -42,7 +42,7 @@ def train_model(n_estimators):
 
         joblib.dump(model, "model.pkl")
 
-        mlflow.sklearn.log_model(model, "random-forest-model")
+        mlflow.sklearn.log_model(model, "random-forest-model", skops_trusted_types=["sklearn.tree._tree.Tree"])
         mlflow.log_param("n_estimators", n_estimators)
         mlflow.log_metric("accuracy", accuracy)
 
