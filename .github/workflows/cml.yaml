@@ -1,4 +1,4 @@
-﻿name: MLOps with CML
+name: MLOps with CML
 on: [push, pull_request]
 jobs:
   train-and-report:
@@ -33,7 +33,7 @@ jobs:
           dvc remote modify origin --local auth basic
           dvc remote modify origin --local user $DAGSHUB_USERNAME
           dvc remote modify origin --local password $DAGSHUB_API_KEY
-          dvc pull -r origin
+          dvc pull -r origin --allow-missing
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
