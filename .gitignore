@@ -4,3 +4,4 @@ __pycache__/
 mlruns/
 mlflow.db
 mlruns/
+/confusion_matrix.png
