@@ -1,0 +1,9 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: echo "Verificando que los datos existen..."
+    deps:
+    - path: data/iris_dataset.csv
+      hash: md5
+      md5: 07ee3bb55765837c3551d0db5a2674e1
+      size: 2947
