@@ -15,4 +15,4 @@ COPY app_web.py .
 EXPOSE 8501
 
 # Comando para ejecutar la API cuando se inicie el contenedor
-CMD ["streamlit", "run", "app_web.py"]
+CMD ["streamlit", "run", "app_web.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.enableCORS=false", "--server.enableXsrfProtection=false"]
