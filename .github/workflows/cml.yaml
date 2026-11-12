@@ -87,7 +87,7 @@ jobs:
           dvc pull -r origin --allow-missing
       - name: Configure Docker to use GCR
         run: gcloud auth configure-docker
-            - name: Build API Docker Image
+      - name: Build API Docker Image
         id: build_api
         run: |
           IMAGE_NAME="gcr.io/${{ vars.GCP_PROJECT_ID }}/mlops-api:latest"
